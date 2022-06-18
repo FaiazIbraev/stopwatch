@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playButton.isEnabled = false
+        playButton.isEnabled = true
         
         hourLabel.text = hours
         minLabel.text = minutes
@@ -37,19 +37,29 @@ class ViewController: UIViewController {
     @IBAction func stopButton(_ sender: UIButton) {
         print("Stop")
         timer.invalidate()
-        
+        reset()
         playButton.isEnabled = true
+    }
+    
+    func reset (){
+        hourLabel.text = "00"
+        minLabel.text = "00"
+        secLabel.text = "00"
         
     }
+    
     
     @IBAction func pauseButton(_ sender: UIButton) {
         print("Pause")
         timer.invalidate()
+        playButton.isEnabled = true
     }
     
     @IBAction func playButton(_ sender: UIButton) {
         print("Play")
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(makeStep), userInfo: nil, repeats: true)
+    
+        playButton.isEnabled = false
     }
     
     @objc func makeStep(){

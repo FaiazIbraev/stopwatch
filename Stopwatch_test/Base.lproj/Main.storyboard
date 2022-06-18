@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -139,7 +139,7 @@
                             <constraint firstItem="OIE-mA-xyK" firstAttribute="leading" secondItem="gFv-lN-BDv" secondAttribute="trailing" constant="10" id="mOn-pt-UW0"/>
                             <constraint firstItem="gFv-lN-BDv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nX5-NQ-0K7"/>
                             <constraint firstItem="gFv-lN-BDv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKd-gY-9f9"/>
-                            <constraint firstItem="Lpf-Up-8a7" firstAttribute="leading" secondItem="wYr-rG-gL1" secondAttribute="trailing" constant="30" id="vNT-nH-eQd"/>
+                            <constraint firstItem="Lpf-Up-8a7" firstAttribute="leading" secondItem="wYr-rG-gL1" secondAttribute="trailing" constant="25" id="vNT-nH-eQd"/>
                             <constraint firstItem="Sc0-Gs-EVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wN3-36-Zbu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lpf-Up-8a7" secondAttribute="bottom" constant="30" id="xxh-ar-IbW"/>
                         </constraints>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1771" y="-248"/>
+            <point key="canvasLocation" x="-2077" y="-262"/>
         </scene>
     </scenes>
     <resources>
