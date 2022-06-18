@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -120,6 +120,33 @@
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBD-dx-3p0"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WOK-bl-H6t">
+                                <rect key="frame" x="67" y="166" width="280" height="61"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HG0-If-Pgm"/>
+                                    <constraint firstAttribute="width" constant="280" id="ygn-h6-kBN"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Stopwatch"/>
+                                    <segment title="Timer"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="Segmented_control:" destination="BYZ-38-t0r" eventType="valueChanged" id="Aab-YI-9Ps"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-0d-Gfe">
+                                <rect key="frame" x="18" y="256" width="378" height="41"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gdk-3m-gBB"/>
+                                </constraints>
+                                <color key="thumbTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="Slider_value_change:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jy6-9C-cWy"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,13 +158,19 @@
                             <constraint firstItem="37M-sR-ckr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EKM-iz-9HL"/>
                             <constraint firstItem="W27-KJ-ffy" firstAttribute="leading" secondItem="OIE-mA-xyK" secondAttribute="trailing" constant="10" id="FDK-9S-CX0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wYr-rG-gL1" secondAttribute="bottom" constant="30" id="Gei-aw-6Z1"/>
+                            <constraint firstItem="YlT-0d-Gfe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ks4-UM-C3c"/>
                             <constraint firstItem="gFv-lN-BDv" firstAttribute="leading" secondItem="UXW-Xu-6x7" secondAttribute="trailing" constant="10" id="Niy-Y6-CoC"/>
+                            <constraint firstItem="WOK-bl-H6t" firstAttribute="top" secondItem="Sc0-Gs-EVN" secondAttribute="bottom" constant="20" id="PHz-Hf-kvS"/>
+                            <constraint firstItem="YlT-0d-Gfe" firstAttribute="top" secondItem="WOK-bl-H6t" secondAttribute="bottom" constant="30" id="TxB-ee-xjz"/>
                             <constraint firstItem="UXW-Xu-6x7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xmh-pk-ZwQ"/>
                             <constraint firstItem="Sc0-Gs-EVN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="aPf-8y-nUF"/>
+                            <constraint firstItem="YlT-0d-Gfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bPa-aK-En8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YlT-0d-Gfe" secondAttribute="trailing" constant="20" id="caN-hd-OJ1"/>
                             <constraint firstItem="wYr-rG-gL1" firstAttribute="leading" secondItem="zbs-rO-whZ" secondAttribute="trailing" constant="25" id="cv6-kg-HZg"/>
                             <constraint firstItem="wYr-rG-gL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kLE-ew-CP6"/>
                             <constraint firstItem="OIE-mA-xyK" firstAttribute="leading" secondItem="gFv-lN-BDv" secondAttribute="trailing" constant="10" id="mOn-pt-UW0"/>
                             <constraint firstItem="gFv-lN-BDv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nX5-NQ-0K7"/>
+                            <constraint firstItem="WOK-bl-H6t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sGW-0C-m2n"/>
                             <constraint firstItem="gFv-lN-BDv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKd-gY-9f9"/>
                             <constraint firstItem="Lpf-Up-8a7" firstAttribute="leading" secondItem="wYr-rG-gL1" secondAttribute="trailing" constant="25" id="vNT-nH-eQd"/>
                             <constraint firstItem="Sc0-Gs-EVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wN3-36-Zbu"/>
@@ -145,10 +178,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Segment_control" destination="WOK-bl-H6t" id="GIr-Vc-12B"/>
                         <outlet property="hourLabel" destination="37M-sR-ckr" id="W2Q-0j-sav"/>
                         <outlet property="minLabel" destination="gFv-lN-BDv" id="fbQ-CA-TUK"/>
                         <outlet property="playButton" destination="Lpf-Up-8a7" id="1M7-h9-Ia7"/>
                         <outlet property="secLabel" destination="W27-KJ-ffy" id="51u-Vb-LWx"/>
+                        <outlet property="slider" destination="YlT-0d-Gfe" id="9Zk-kO-bLG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,6 +196,9 @@
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
